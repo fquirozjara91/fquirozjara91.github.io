@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, Download, Moon, Sun, ExternalLink, Code2, Shield } from 'lucide-react'
 import foto from './assets/1711240096772.jpeg'
@@ -33,7 +33,9 @@ const certifications = [
 ]
 
 export default function Portfolio() {
-  const [dark, setDark] = useState(true)
+  const [dark, setDark] = useState(true);
+  const [canSend, setCanSed] = useState(false);
+  const captchaRef = useRef(null);
   const accent = '#0a192f'
 
   const theme = useMemo(() => ({
@@ -45,7 +47,21 @@ export default function Portfolio() {
     btn: dark ? "bg-accent text-white hover:bg-accent/90" : "bg-accent text-black hover:bg-accent/90"
   }), [dark])
 
-  
+  useEffect(() => {
+    const tryInit = () => {
+      if (window.hcaptcha && captchaRef.current) {
+        window.hcaptcha.render(captchaRef.current, {
+          sitekey: import.meta.env.VITE_HCAPTCHA_SITE_KEY,
+          callback: () => setCanSend(true),
+          'error-callback': () => setCanSend(false),
+          'expired-callback': () => setCanSend(false),
+        });
+      } else {
+        setTimeout(tryInit, 250);
+      }
+    };
+    tryInit();
+  }, []);
 
   return (
     <div className={`${theme.page} min-h-screen transition-colors`}>
@@ -164,13 +180,10 @@ export default function Portfolio() {
             <input type="text" name="subject" placeholder="Asunto" className="rounded-xl px-4 py-3 ring-1 ring-black/10 bg-transparent md:col-span-2" />
             <textarea name="message" placeholder="Mensaje" className="min-h-[140px] rounded-xl px-4 py-3 ring-1 ring-black/10 bg-transparent md:col-span-2" required />
             <div className="md:col-span-2">
-              <div
-                className="h-captcha"
-                data-sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY}>
-              </div>
+              <div ref={captchaRef} className="h-captcha" />
             </div>
             <div className="md:col-span-2">
-              <button type="submit" className="w-full md:w-auto inline-flex items-center gap-2 rounded-2xl px-5 py-3" style={{ background: accent, color: 'white' }}>
+              <button type="submit" disabled={!canSend} className="w-full md:w-auto inline-flex items-center gap-2 rounded-2xl px-5 py-3" style={{ background: accent, color: 'white' }}>
                 Enviar
               </button>
             </div>
