@@ -34,7 +34,7 @@ const certifications = [
 
 export default function Portfolio() {
   const [dark, setDark] = useState(true);
-  const [canSend, setCanSed] = useState(false);
+  const [canSend, setCanSend] = useState(false);
   const captchaRef = useRef(null);
   const accent = '#0a192f'
 
