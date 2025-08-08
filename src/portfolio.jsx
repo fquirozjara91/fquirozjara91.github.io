@@ -158,7 +158,7 @@ export default function Portfolio() {
         <div className={`rounded-3xl p-8 md:p-10 ${theme.card}`}>
           <h2 className="text-2xl md:text-3xl font-semibold">Hablemos</h2>
           <p className={`mt-2 ${theme.muted}`}>¿Tienes un proyecto o una propuesta? Completa el formulario y te respondo a la brevedad.</p>
-          <form className="mt-6 grid gap-4 md:grid-cols-2" method="POST" action="https://formspree.io/f/your-id">
+          <form className="mt-6 grid gap-4 md:grid-cols-2" method="POST" action="https://formspree.io/f/mjkoplwl">
             <input type="text" name="name" placeholder="Nombre" className="rounded-xl px-4 py-3 ring-1 ring-black/10 bg-transparent" required />
             <input type="email" name="email" placeholder="Correo" className="rounded-xl px-4 py-3 ring-1 ring-black/10 bg-transparent" required />
             <input type="text" name="subject" placeholder="Asunto" className="rounded-xl px-4 py-3 ring-1 ring-black/10 bg-transparent md:col-span-2" />
