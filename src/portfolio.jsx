@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, Download, Moon, Sun, ExternalLink, Code2, Shield } from 'lucide-react'
+import foto from './assets/1711240096772.jpeg'
 
 const projects = [
   { title: 'Engine SobreTasa – Control de Cambio III', period: 'Jul 2024 – Jun 2025', role: 'Líder Técnico / Full Stack',
@@ -44,9 +45,7 @@ export default function Portfolio() {
     btn: dark ? "bg-accent text-white hover:bg-accent/90" : "bg-accent text-black hover:bg-accent/90"
   }), [dark])
 
-  const clipped = useMemo(() => ({
-    clip : 'clip-path: circle()',
-  }))
+  
 
   return (
     <div className={`${theme.page} min-h-screen transition-colors`}>
@@ -101,7 +100,7 @@ export default function Portfolio() {
           <div className="flex justify-center">
             <div className="relative aspect-square w-56 md:w-72 rounded-full p-[2px]" style={{ background: accent }}>
               <div className={`h-full w-full rounded-full ${theme.card} grid place-items-center`}>
-                <img src="./public/1711240096772.jpeg" className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover shadow-lg"/>
+                <img src={foto} alt="Foto de Felipe Quiroz" className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover shadow-lg"/>
               </div>
             </div>
           </div>
