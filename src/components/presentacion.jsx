@@ -18,8 +18,9 @@ export default function Presentacion({ theme, accent, dark, setDark }) {
           </p>
 
           <p className={`mt-6 max-w-prose ${theme.text}`}>
-            Ingeniero Informático con más de 5 años construyendo soluciones para el sector público y privado. Especialista en
-            aplicaciones web/móviles, integraciones API (REST/SOAP), procesos batch y despliegues CI/CD.
+            Ingeniero Informático con más de 7 años en desarrollo y arquitectura de soluciones empresariales para el sector
+            público chileno (SII, MDS y SENCE). Especializado en sistemas tributarios, procesos batch, microservicios REST/SOAP
+            y despliegues CI/CD. Actualmente Desarrollador Full Stack en SIIGSA para el SII.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -35,7 +36,7 @@ export default function Presentacion({ theme, accent, dark, setDark }) {
               <Linkedin size={18} /> LinkedIn
             </a>
 
-            <a href="/CV-2025.pdf" target="_blank" rel="noopener" download
+            <a href="/CV-2026.pdf" target="_blank" rel="noopener" download
                className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 ring-1 hover:ring-2"
                style={{ borderColor: accent, color: dark ? '#fff' : accent }}>
               <Download size={18} /> Descargar CV (PDF)
@@ -59,4 +60,4 @@ export default function Presentacion({ theme, accent, dark, setDark }) {
       </div>
     </section>
   );
-}
+}
