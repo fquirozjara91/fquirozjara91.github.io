@@ -55,6 +55,13 @@ export const projects = [
     tech: ['Java','Spring','Spring Batch','AngularJS','Oracle'],
   },
   {
+    title: 'Transbank – Proyecto BUC',
+    period: 'Abr 2021 – May 2021',
+    role: 'Analista / Backend',
+    summary: 'Desarrollo de integraciones y servicios SOAP.',
+    tech: ['Java 8','Spring Boot','VueJS','Docker','Kafka','Oracle'],
+  },
+  {
     title: 'BUC – Sodimac (GCP)',
     period: 'Ago 2019 – Sep 2019',
     role: 'Full Stack',

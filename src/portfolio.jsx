@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import Presentacion from './components/presentacion.jsx';
 import Proyectos from './components/proyectos.jsx';
 import Stack from './components/stack.jsx';
+import Educacion from './components/educacion.jsx';
 import Formacion from './components/certification.jsx';
 import Formulario from './components/formulario.jsx';
 import { Moon, Sun } from 'lucide-react'
@@ -33,6 +34,7 @@ export default function Portfolio() {
           <nav className="hidden md:flex gap-6 text-sm">
             <a className={theme.link} href="#proyectos">Proyectos</a>
             <a className={theme.link} href="#stack">Stack</a>
+            <a className={theme.link} href="#educacion">Educación</a>
             <a className={theme.link} href="#certificaciones">Certificaciones</a>
             <a className={theme.link} href="#contacto">Contacto</a>
           </nav>
@@ -48,6 +50,7 @@ export default function Portfolio() {
       <Presentacion theme={theme} accent={accent} dark={dark} setDark={setDark} />
       <Proyectos theme={theme} accent={accent}/>
       <Stack theme={theme} />
+      <Educacion theme={theme} />
       <Formacion theme={theme} />
       <Formulario theme={theme} accent={accent} />
     </div>
