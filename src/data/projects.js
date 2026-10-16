@@ -1,5 +1,21 @@
 export const projects = [
   {
+    title: 'Microservicios SII – SIIGSA',
+    period: 'Ene 2026 – Actualidad',
+    role: 'Full Stack',
+    summary:
+      'Desarrollo y migración de microservicios usados por departamentos del SII (Renta, IVA, Avaluaciones) y por terceros.',
+    tech: ['Java','VueJS','Spring Boot','JUnit','Oracle SQL'],
+  },
+  {
+    title: 'SSO – Ministerio de Desarrollo Social y Familia',
+    period: 'Ene 2026 – Mar 2026',
+    role: 'Full Stack',
+    summary:
+      'Implementación de Single Sign On corporativo en aplicativo legacy de la intranet del Ministerio, con migración de stack tecnológico.',
+    tech: ['Java 1.6/1.8'],
+  },
+  {
     title: 'Engine SobreTasa – Control de Cambio III',
     period: 'Jul 2024 – Jun 2025',
     role: 'Líder Técnico / Full Stack',
@@ -39,6 +55,13 @@ export const projects = [
     tech: ['Java','Spring','Spring Batch','AngularJS','Oracle'],
   },
   {
+    title: 'Transbank – Proyecto BUC',
+    period: 'Abr 2021 – May 2021',
+    role: 'Analista / Backend',
+    summary: 'Desarrollo de integraciones y servicios SOAP.',
+    tech: ['Java 8','Spring Boot','VueJS','Docker','Kafka','Oracle'],
+  },
+  {
     title: 'BUC – Sodimac (GCP)',
     period: 'Ago 2019 – Sep 2019',
     role: 'Full Stack',
@@ -46,4 +69,4 @@ export const projects = [
       'Unificación regional de base de clientes. Arquitectura, servicios REST y despliegues en Docker.',
     tech: ['GCP','TypeScript','Docker','PostgreSQL'],
   },
-];
+];
